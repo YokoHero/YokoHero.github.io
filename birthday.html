@@ -122,7 +122,7 @@
             S.Drawing.init('.canvas');
             document.body.classList.add('body--ready');
             //想说的话
-            S.UI.simulate("#countdown 3|可爱又迷人的霏霏|祝你生日快乐哟|#rectangle 15x15|#circle 12 |#time");
+            S.UI.simulate("可爱又迷人的霏霏|祝你生日快乐哟|#countdown 3|#rectangle 15x15|#circle 12 |#time");
             S.Drawing.loop(function () {
                 S.Shape.render();
             });
@@ -241,7 +241,7 @@
                     case 'circle':
                         value = parseInt(value) || maxShapeSize;
                         value = Math.min(value, maxShapeSize);
-                        S.Shape.switchShape(S.ShapeBuilder.circle(value));
+                        S.Shape.switchShape(S.ShapeBuilder.circle.circle(value));
                         break;
                     case 'time':
                         var t = formatTime(new Date());
